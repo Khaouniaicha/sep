@@ -22,7 +22,6 @@ djangorestframework==3.15.2
 djangorestframework-simplejwt==5.3.1
 docassemble-backports==1.0
 executing==2.1.0
-GDAL @ D:\v1\v00.1\Authentification-system-with-django-main\GDAL-3.4.3-cp311-cp311-win_amd64.whl
 geographiclib==2.0
 geopy==2.4.1
 hyperlink==21.0.0
