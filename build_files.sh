@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Check if python3 is available
 if ! command -v python3 &> /dev/null
 then
@@ -7,18 +10,23 @@ then
     exit 1
 fi
 
+# Display Python version
 python3 --version
 
-# Create a virtual environment
+# Create and activate a virtual environment
 python3 -m venv venv
-
-# Activate the virtual environment
 source venv/bin/activate
 
-# Upgrade pip within the virtual environment
+# Upgrade pip
 python3 -m pip install --upgrade pip
 
 # Install dependencies
 python3 -m pip install -r requirements.txt
 
-# Add any other build steps here, using python3 instead of python
+# Run Django migrations (optional, if needed)
+python3 manage.py migrate
+
+# Collect static files
+python3 manage.py collectstatic --noinput
+
+# Add any other build steps here
