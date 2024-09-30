@@ -1,0 +1,63 @@
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnements virtuels
+# Flutter build files
+/aichaapp/build/
+/aichaapp/.dart_tool/
+noti.py
+test01/
+env/
+venv/
+ENV/
+venv10/
+env.bak/
+venv.bak/
+
+# Fichiers de base de données
+*.sqlite3
+
+# Fichiers de migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# Fichiers de configuration sensibles
+.env
+*.env
+
+# Fichiers statiques collectés
+/staticfiles/
+static/
+
+# Media files (si stockés localement)
+media/
+
+# Fichiers de log
+*.log
+
+# Dossiers et fichiers IDE/Éditeurs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+
+# Fichiers de tests
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Autres fichiers temporaires
+*.tmp
+*.temp
+*.bak
+*.swp
