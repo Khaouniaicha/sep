@@ -1,6 +1,17 @@
-# build_files.sh
-pip install -r requirements.txt
+#!/bin/bash
 
-# make migrations
-python3.9 manage.py migrate 
-python3.9 manage.py collectstatic
+# Install Python (if not already installed)
+# Vercel's build environment might already have Python, but it's good to ensure.
+# You can specify the Python version you need.
+
+# Check Python version
+python --version
+
+# Upgrade pip using Python's module interface to ensure it's available
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+
+# Install dependencies
+python -m pip install -r requirements.txt
+
+# Add any other build steps here
