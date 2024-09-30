@@ -1,15 +1,14 @@
 from . info import *
 from pathlib import Path
 import os 
-import dj_database_url
+
 
 import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 # settings.py
 from dotenv import load_dotenv
-load_dotenv()
-DATABASE_URL='postgresql://postgres:IvfxKDLUGAQKzTiBKWxGVDXaqccDBoOk@postgres.railway.internal:5432/railway'
+
 EMAIL_USE_TLS = EMAIL_USE_TLS
 EMAIL_HOST = EMAIL_HOST
 EMAIL_HOST_USER =EMAIL_HOST_USER
@@ -124,9 +123,16 @@ WSGI_APPLICATION = 'application.wsgi.application'
 #
 # Database configuration using dj_database_url
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': os.environ['ENGINE'] ,  # Since you're using PostGIS
+        'NAME': os.environ['NAME'] ,
+        'USER': os.environ['USER'],
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': os.environ['HOST'],
+        'PORT': os.environ['PORT'],
+    }
 }
-DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+
 
 
 
