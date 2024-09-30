@@ -33,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY ='rt!y4d5m%$znu9*qd2rvpecw7&kop(vj+z6+0xc=mb0rp7(go0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
